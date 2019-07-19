@@ -3,7 +3,7 @@ const conn = new jsforce.Connection();
 
 module.exports = {
     connect: (callback) => {
-        conn.login(process.env.username, process.env.password, function(err, response) {
+        conn.login(process.env.USERNAME, process.env.PASSWORD, function(err, response) {
             if (err) {
                 return callback(err);
             }
