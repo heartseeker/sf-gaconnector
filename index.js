@@ -69,7 +69,7 @@ app.get('/api/opportunity', (req, res) => {
 });
 
 server.listen(port, () => {
-    console.log(process.env.USER);
+    console.log(process.env.username);
     console.log('running on port http://localhost:' + port);
 });
 
