@@ -4,6 +4,8 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const port = process.env.PORT || 8000; 
 const helper = require('./functions');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const connections = [];
 
@@ -67,8 +69,7 @@ app.get('/api/opportunity', (req, res) => {
 });
 
 server.listen(port, () => {
-    console.log('username === ', process.env.username);
-    console.log('USERNAME === ', process.env.USERNAME);
+    console.log(process.env.USER);
     console.log('running on port http://localhost:' + port);
 });
 

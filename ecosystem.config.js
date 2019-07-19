@@ -5,10 +5,12 @@ module.exports = {
     instances: "max",
     env: {
       NODE_ENV: "development",
-      USERNAME: process.env.username
+      USER: process.env.username,
+      PASSWORD: process.env.password
     },
     env_production: {
       NODE_ENV: "production",
+      USER: process.env.username,
       PASSWORD: process.env.password
     }
   }]
